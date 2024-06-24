@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    background-image: url(assets/background/3.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+main .top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .top-content .about-me {
+    /* border: 2px solid blue; */
+    max-width: 26.5rem;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 30%) 2px 2px;
+    padding: 0.8rem;
+}
+
+main .top-content .about-me .about-me-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    main .top-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .top-content .about-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 12.5rem;
+        margin-top: 0.7rem;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 30%) 2px 2px;
+        padding: 0.8rem;
+    }
+
+    main .top-content > img {
+        margin-top: 0.7rem;
+        box-shadow: rgb(0 0 0 / 20%) 2px 2px;
+    }
+}
+
+
+
+
+
+
+/*                           */
+
+footer {
+    border: 2px solid green;
+    
+}
