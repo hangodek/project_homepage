@@ -18,13 +18,31 @@ main {
     background-image: url(assets/background/3.jpg);
     background-size: cover;
     background-position: center;
-    
+    min-height: 100vh;
 }
 
 main .top-content {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main .top-content .profile-img {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+main .top-content .profile-img > h2 {
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    transition: transform 500ms ease;
+}
+
+main .top-content .profile-img > h2:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 main .top-content .about-me {
@@ -63,9 +81,27 @@ main .top-content .about-me .about-me-icons {
         padding: 0.8rem;
     }
 
-    main .top-content > img {
+    main .top-content .profile-img > img {
         margin-top: 0.7rem;
         box-shadow: rgb(0 0 0 / 20%) 2px 2px;
+        width: 12.5rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main .top-content {
+        display: block;
+    }
+
+    main .top-content .profile-img {
+        position: relative;
+        float: left;
+        margin: 10px;
+        /* top: 0; */
+    }
+
+    main .top-content .profile-img > img {
+        max-width: 28vw;
     }
 }
 
