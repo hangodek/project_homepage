@@ -14,8 +14,11 @@ html, body {
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-direction: column;
     border: 2px solid red;
-    background-image: url(assets/background/3.jpg);
+    background-image: url(assets/background/2.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -105,10 +108,57 @@ main .top-content .about-me .about-me-icons {
     }
 }
 
+/*                           */
 
+main .bottom-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.8rem;
+    max-width: 1500px;
+}
 
+main .bottom-content > h1 {
+    padding: 10px;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+}
 
+main .bottom-content .work-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+}
 
+main .bottom-content .work-cards > div > img {
+    height: 100%;
+    width: 100%;
+    align-self: center;
+}
+
+main .bottom-content .work-cards > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.59);
+}
+
+main .bottom-content .work-cards > div > div {
+    position: relative;
+    padding: 1rem;
+}
+
+main .bottom-content .work-cards > div > div > .card-icons {
+    display: flex;
+    gap: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 3rem;
+}
 
 /*                           */
 
