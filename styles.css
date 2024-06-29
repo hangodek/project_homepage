@@ -17,7 +17,6 @@ main {
     align-items: center;
     gap: 1.2rem;
     flex-direction: column;
-    border: 2px solid red;
     background-image: url(assets/background/2.jpg);
     background-size: cover;
     background-position: center;
@@ -28,6 +27,7 @@ main .top-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 main .top-content .profile-img {
@@ -49,7 +49,6 @@ main .top-content .profile-img > h2:hover {
 }
 
 main .top-content .about-me {
-    /* border: 2px solid blue; */
     max-width: 26.5rem;
     background-color: white;
     box-shadow: rgb(0 0 0 / 30%) 2px 2px;
@@ -160,9 +159,78 @@ main .bottom-content .work-cards > div > div > .card-icons {
     right: 3rem;
 }
 
+main .bottom-content .work-cards > div > div > .card-icons > img {
+    transition: transform 500ms ease;
+}
+
+main .bottom-content .work-cards > div > div > .card-icons > img:nth-child(1):hover,
+main .bottom-content .work-cards > div > div > .card-icons > img:nth-child(2):hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    main .bottom-content .work-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    main .bottom-content .work-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /*                           */
 
 footer {
-    border: 2px solid green;
-    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+footer .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25rem;
+}
+
+footer .footer-left > p > img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+footer .footer-left .footer-icons > img {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+footer .footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-right img {
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer .footer-left {
+        
+    }
 }
